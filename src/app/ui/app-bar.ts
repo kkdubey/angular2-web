@@ -37,4 +37,5 @@ import { Component } from '@angular/core';
     
   `
 })
-export class AppBar {}
+export class AppBar {
+}
