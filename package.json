@@ -23,6 +23,7 @@
     "@angular/router": "3.0.0-rc.2",
     "@angular/upgrade": "2.0.0-rc.6",
     "@angularclass/api": "^1.2.0",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.15",
     "@types/hammerjs": "^2.0.33",
     "angular-cli": "^1.0.0-beta.22-1",
     "awesome-typescript-loader": "^3.0.0-beta.14",

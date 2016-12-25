@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { MdToolbar } from '../../../node_modules/material2/src/components/toolbar/toolbar';
 
 @Component({
   selector: 'app-bar',

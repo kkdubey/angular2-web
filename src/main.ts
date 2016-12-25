@@ -5,8 +5,7 @@ import { HttpModule } from '@angular/http'
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { App, routes, providers } from './app'
 import { Main, Notes, About, Auth, Register } from './app/containers'
-import { MaterialModule } from '@angular/material';
-// import { MdToolbar } from '../node_modules/material2/src/components/toolbar/toolbar';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { 
   AppBar,
@@ -35,7 +34,7 @@ import {
     FormsModule,
     HttpModule,
     routes,
-    MaterialModule.forRoot()
+    NgbModule.forRoot()
   ],
   providers,
   schemas: [NgModule],
