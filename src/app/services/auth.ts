@@ -40,7 +40,7 @@ export class AuthService implements CanActivate {
 
   onCanActivate(canActivate: boolean) {
     if (!canActivate) {
-      this.router.navigate(['', 'auth']);
+      this.router.navigate(['', 'login']);
     }
   }
 
@@ -54,6 +54,6 @@ export class AuthService implements CanActivate {
   signout() {
     window.localStorage.removeItem(this.JWT_KEY);
     this.store.purge();
-    this.router.navigate(['', 'auth']);
+    this.router.navigate(['', 'login']);
   }
 }

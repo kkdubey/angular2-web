@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http'
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { App, routes, providers } from './app'
-import { Main, Notes, About, Auth, Login, Register } from './app/containers'
+import { Main, Notes, About, Login, Register } from './app/containers'
 import { MaterialModule } from '@angular/material';
 import { MdToolbar, MdIconRegistry, MdIcon, MdToolbarRow } from '@angular/material'
 
@@ -34,7 +34,6 @@ import {
     ColorPicker,
     ErrorPannel,
     About,
-    Auth,
     Login,
     Register,
   ],

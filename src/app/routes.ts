@@ -1,7 +1,7 @@
 import { AuthService } from './services';
 import { RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core' 
-import { Main, Notes, About, Auth, Login, Register } from './containers';
+import { Main, Notes, About, Login, Register } from './containers';
 
 
 export const routes: ModuleWithProviders = RouterModule.forRoot([
@@ -14,7 +14,7 @@ export const routes: ModuleWithProviders = RouterModule.forRoot([
       { path: 'about', component: About }
     ]
   },
-  { path: 'auth', component: Login },
+  { path: 'login', component: Login },
   { path: 'register', component: Register },
   { path: '**', redirectTo: '' }
 ]);
