@@ -51,6 +51,10 @@ export class AuthService implements CanActivate {
       .map((res: any) => res.data);
   }
 
+  getMenus(isAuthorized: boolean): Array<Object> {
+    return [];
+  }
+
   signout() {
     window.localStorage.removeItem(this.JWT_KEY);
     this.store.purge();

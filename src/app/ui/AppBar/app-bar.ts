@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services';
 
 @Component({
   selector: 'app-bar',
@@ -6,4 +7,14 @@ import { Component } from '@angular/core';
   templateUrl: `app/ui/AppBar/app-bar.tpl.html`
 })
 export class AppBar {
+  menus = [];
+  isLoggedIn = false;
+  constructor(private authService: AuthService) {
+    this.isLoggedIn = this.authService.isAuthorized();
+    this.menus = this.authService.getMenus(this.authService.isAuthorized());
+  }
+  
+  signOut() {
+    this.authService.signout();
+  }
 }

@@ -3,9 +3,10 @@
     Retain
     </span>
     <nav class="col-xs-2">
-    <div class="row middle-xs between-xs">
+    <div class="row middle-xs between-xs" [ngSwitch]="isLoggedIn">
         <span [routerLink]="['', 'about']" class="link">About</span>
-        <span class="link">signout</span>
+        <span class="link" (click)="signOut()" *ngSwitchCase="true">Signout</span>
+        <span class="link" *ngSwitchCase="false">Signin</span>
     </div>
     </nav>
 </header>
