@@ -39,7 +39,16 @@
       </div>
 
       <div class="row">
-        <md-input-container class="col-xs-12 col-lg-6" >
+        <md-input-container class="col-xs-12 col-lg-4" >
+          <input md-input placeholder="Date Of Borth"
+            type="date"
+            name="dateOfBorth"
+            id="dateOfBorth"
+            [(ngModel)]="user.dateOfBorth"
+            #dateOfBorth="ngModel"
+          >
+        </md-input-container> 
+        <md-input-container class="col-xs-12 col-lg-4" >
           <input md-input placeholder="Phone Number"
             type="text"
             name="phone"
@@ -48,7 +57,7 @@
             #phone="ngModel"
           >
         </md-input-container>        
-        <md-input-container class="col-xs-12 col-lg-6" >
+        <md-input-container class="col-xs-12 col-lg-4" >
           <input md-input placeholder="Email"
             type="email"
             name="email"

@@ -11,7 +11,9 @@ import { Router } from '@angular/router';
 export class Register {
   user = {
     firstName: '',
+    middleName: '',
     lastName: '',
+    dateOfBorth: '',
     phone: '',
     password: '',
     email: '',
@@ -32,7 +34,7 @@ export class Register {
   registerUser() {
     this.validateForm();
     if(this.errors.length == 0) {
-      this.auth.authenticate("", this.user)
+      this.auth.authenticate("register", this.user)
       .subscribe(() => this.router.navigate(['']));
     }
   }
@@ -44,12 +46,16 @@ export class Register {
       var error = { Id: 'firstName', Text: 'Please enter First Name'}
       this.errors.push(error);
     }
-    if(this.user.lastName == '') {
+    if(this.user.middleName == '') {
       var error = { Id: 'middleName', Text: 'Please enter Middle Name'}
       this.errors.push(error);
     }
     if(this.user.lastName == '') {
       var error = { Id: 'lastName', Text: 'Please enter Last Name'}
+      this.errors.push(error);
+    }
+    if(this.user.email == '') {
+      var error = { Id: 'dateOfBorth', Text: 'Please enter Date Of Borth'}
       this.errors.push(error);
     }
     if(this.user.email == '') {

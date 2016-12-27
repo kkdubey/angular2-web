@@ -45,7 +45,7 @@ export class AuthService implements CanActivate {
   }
 
   authenticate(path, creds): Observable<any> {
-    return this.api.post(`/${path}`, creds)
+    return this.api.post(`/api/user/${path}`, creds)
       .do((res: any) => this.setJwt(res.token))
       .do((res: any) => this.storeHelper.update('user', res.data))
       .map((res: any) => res.data);

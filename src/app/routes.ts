@@ -7,7 +7,7 @@ import { Main, Notes, About, Login, Register } from './containers';
 export const routes: ModuleWithProviders = RouterModule.forRoot([
   {
     path: '',
-    component: Main,
+    //component: Main,
     canActivate: [AuthService],
     children: [
       { path: '', component: Notes },
