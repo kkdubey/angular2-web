@@ -22,6 +22,7 @@ import { Router } from '@angular/router';
             <input md-input placeholder="First Name"
               type="text"
               name="firstName"
+              id="firstName"
               [(ngModel)]="user.firstName"
               #firstName="ngModel"
             >
@@ -30,6 +31,7 @@ import { Router } from '@angular/router';
             <input md-input placeholder="Middle Name"
               type="text"
               name="middleName"
+              id="middleName"
               [(ngModel)]="user.middleName"
               #middleName="ngModel"
             >
@@ -38,6 +40,7 @@ import { Router } from '@angular/router';
             <input md-input placeholder="Last Name"
               type="text"
               name="lastName"
+              id="lastName"
               [(ngModel)]="user.lastName"
               #lastName="ngModel"
             >
@@ -49,6 +52,7 @@ import { Router } from '@angular/router';
             <input md-input placeholder="Phone Number"
               type="text"
               name="phone"
+              id="phone"
               [(ngModel)]="user.phone"
               #phone="ngModel"
             >
@@ -57,6 +61,7 @@ import { Router } from '@angular/router';
             <input md-input placeholder="Email"
               type="email"
               name="email"
+              id="email"
               [(ngModel)]="user.email"
               #email="ngModel"
               >
@@ -68,6 +73,7 @@ import { Router } from '@angular/router';
             <input md-input placeholder="Password"
               type="password"
               name="password"
+              id="password"
               [(ngModel)]="user.password"
               #password="ngModel"
             >
@@ -76,6 +82,7 @@ import { Router } from '@angular/router';
             <input md-input placeholder="Confirm Password"
               type="password"
               name="confirmPassword"
+              id="confirmPassword"
               [(ngModel)]="user.confirmPassword"
               #confirmPassword="ngModel"
             >
@@ -101,7 +108,8 @@ export class Register {
     lastName: '',
     phone: '',
     password: '',
-    email: ''
+    email: '',
+    confirmPassword: ''
   };
   errors = [];
 
@@ -131,6 +139,10 @@ export class Register {
       this.errors.push(error);
     }
     if(this.user.lastName == '') {
+      var error = { Id: 'middleName', Text: 'Please enter Middle Name'}
+      this.errors.push(error);
+    }
+    if(this.user.lastName == '') {
       var error = { Id: 'lastName', Text: 'Please enter Last Name'}
       this.errors.push(error);
     }
@@ -139,11 +151,15 @@ export class Register {
       this.errors.push(error);
     }
     if(this.user.phone == '') {
-      var error = { Id: 'mobile', Text: 'Please enter valid mobile'}
+      var error = { Id: 'phone', Text: 'Please enter valid mobile'}
       this.errors.push(error);
     }
     if(this.user.password == '') {
       var error = { Id: 'password', Text: 'Please enter password'}
+      this.errors.push(error);
+    }
+    if(this.user.confirmPassword == '' || this.user.password != this.user.confirmPassword) {
+      var error = { Id: 'confirmPassword', Text: 'Please enter valid confirm Password'}
       this.errors.push(error);
     }
   }

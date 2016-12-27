@@ -2,7 +2,8 @@ import {
   Component,
   Input,
   Output,
-  EventEmitter
+  EventEmitter,
+  ElementRef
 } from '@angular/core';
 
 @Component({
@@ -12,7 +13,7 @@ import {
       color: red;
       text-align: left;
       border: 1px solid #f6a2a2;
-      padding: 5px;
+      padding: 2px;
     }
     .link-styles {
       cursor: pointer;
@@ -21,12 +22,12 @@ import {
   template: `
     <div
       *ngIf="errors.length > 0"
-      class="error-styles row shadow-1"
+      class="error-styles row"
     >
       <div class="col-xs-12"
       >
         <ul>
-          <li
+          <li class="shadow-6"
             *ngFor="let error of errors"
           >
             <a class="link-styles"
@@ -46,6 +47,10 @@ export class ErrorPannel {
   @Output() linkClick = new EventEmitter();
 
   onClicked(error) {
-    this.linkClick.next(error);
+    try {
+      document.getElementById(error.Id).focus();
+    } catch (err) {
+      this.linkClick.next(err);
+    }
   }
 }
