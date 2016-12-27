@@ -1,0 +1,36 @@
+.app-bar {
+    height: 65px;
+    padding: 5px 30px;
+    background-color: #00BCD4;
+}
+.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.link {
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout.*/
+    flex: 1 1 auto;
+}
+.demo-toolbar {
+    padding: 6px;
+}
+.demo-toolbar-icon {
+    padding: 0 14px;
+}
+
+.demo-fill-remaining {
+    flex: 1 1 auto;
+}
+.removed-margin {
+    margin-right: '0rem !importent';
+    margin-left: '0rem !importent';
+}
