@@ -17,4 +17,8 @@ export class AppBar {
   signOut() {
     this.authService.signout();
   }
+  createMenu () {
+    this.isLoggedIn = this.authService.isAuthorized();
+    this.menus = this.authService.getMenus(this.authService.isAuthorized());
+  }
 }

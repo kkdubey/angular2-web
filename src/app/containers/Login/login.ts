@@ -30,6 +30,8 @@ export class Login {
 
   authenticate() {
     this.auth.authenticate("login", this.user)
-    .subscribe(() => this.router.navigate(['']))
+    .subscribe(() => {
+      this.router.navigate(['']);
+    })
   }
 }
