@@ -1,42 +1,10 @@
-    /*.auth {
-      height: 100%;
-    }
-    input {
-      border-bottom: 1px solid lightgrey;
-    }
-    .ng-invalid.ng-dirty {
-      border-bottom: 1px solid red;
-    }
-    form {
-      width: 100%;
-      border-radius: 2px;
-      background-color: white;
-      padding: 20px;
-      margin: 10px;
-    }
-    .inputs {
-      height: 100%;
-      position: relative;
-    }
-    .link {
-      color: lightblue;
-    }
-    .link:hover {
-      background-color: transparent;
-    }
-    .error {
-      color: red;
-      position: absolute;
-      right: 20px;
-    }*/
-
-  .contaner {
-    background-color: white;
-    margin: 10px;
-    padding: 20px;
-  }
-  .title {
-    font-size: 30px;
-    font-weight: 300;
-    text-transform: capitalize;
-  }
+.contaner {
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+}
+.title {
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
