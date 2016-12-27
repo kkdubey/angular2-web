@@ -29,6 +29,7 @@ export class Register {
   }
 
   redirectToLogin() {
+    this.router.navigate(['login']);
   }
 
   registerUser() {
