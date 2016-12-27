@@ -35,6 +35,10 @@ import { Component } from '@angular/core';
     .demo-fill-remaining {
       flex: 1 1 auto;
     }
+    .removed-margin {
+      margin-right: 0rem !importent;
+      margin-left: 0rem !importent;
+    }
   `],
   template: `
     <header class="app-bar row middle-xs">
