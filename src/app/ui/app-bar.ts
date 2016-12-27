@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { MdToolbar } from '../../../node_modules/material2/src/components/toolbar/toolbar';
 
 @Component({
   selector: 'app-bar',
@@ -20,6 +19,21 @@ import { Component } from '@angular/core';
       font-size: 24px;
       font-weight: 400;
       cursor: pointer;
+    }
+    .example-fill-remaining-space {
+      // This fills the remaining space, by using flexbox. 
+      // Every toolbar row uses a flexbox row layout.
+      flex: 1 1 auto;
+    }
+    .demo-toolbar {
+      padding: 6px;
+    }
+    .demo-toolbar-icon {
+      padding: 0 14px;
+    }
+
+    .demo-fill-remaining {
+      flex: 1 1 auto;
     }
   `],
   template: `
